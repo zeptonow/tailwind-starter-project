@@ -1,86 +1,87 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
 
 const Home: NextPage = () => {
-  return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+	return (
+		<div>
+			<Head>
+				<title>Create Next App</title>
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
+			{/* body starts */}
+			<div className="md:max-w-sm m-auto p-4 pb-0 ">
+				<div>
+					<nav>
+						<div>
+							<span className="uppercase font-bold tracking-wide text-sm">Home</span>
+							<span className="block text-gray-300 text-xs">303, Gurunanak Rd, Bandra West, Mumbai, 3453453</span>
+						</div>
+						<div></div>
+					</nav>
+				</div>
+				{/* category slider starts */}
+				<div className="mt-8 grid grid-cols-3 sm:grid-cols-4 gap-10 w-full">
+					{new Array(5).fill(0).map((item) => {
+						return (
+							<div className="w-20 h-20 text-center">
+								<div className="bg-red-50 rounded-lg w-full p-4 flex justify-center items-center">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										className="h-10 w-10"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke="currentColor"
+										strokeWidth={1}
+									>
+										<path d="M12 14l9-5-9-5-9 5 9 5z" />
+										<path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+										<path
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+										/>
+									</svg>
+								</div>
+								<span className="block text-gray-400 text-xs">Whiskey</span>
+							</div>
+						);
+					})}
+				</div>
+				{/* category slider ends */}
 
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
+				{/* brand advertise slider starts */}
+				<div className="relative w-full h-48 mt-8">
+					<Image src={"https://picsum.photos/100/200"} objectFit="cover" layout="fill" className="rounded-lg" />
+				</div>
+				{/* brand advertise slider ends */}
 
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
-            pages/index.tsx
-          </code>
-        </p>
+				{/* trending now starts */}
+				<div className="mt-8">
+					<div className="flex justify-between">
+						<div>
+							<span className="font-semibold tracking-wide text-2xl">Curated for you!</span>
+							<span className="block text-gray-400 text-sm">We matched your taste</span>
+						</div>
+						<div className="mt-2 text-red-600 font-semibold">View All</div>
+					</div>
+					<div>
+						{/* card starts here */}
+						<div></div>
+					</div>
+				</div>
+				{/* trending now ends * 3*/}
 
-        <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and its API.
-            </p>
-          </a>
+				{/* the reserve slider starts */}
+				<div></div>
+				{/* the reserve slider ends */}
 
-          <a
-            href="https://nextjs.org/learn"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
+				{/* loved brand starts */}
+				<div></div>
+				{/* loved brand ends */}
+			</div>
+		</div>
+	);
+};
 
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className="flex h-24 w-full items-center justify-center border-t">
-        <a
-          className="flex items-center justify-center gap-2"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-        </a>
-      </footer>
-    </div>
-  )
-}
-
-export default Home
+export default Home;
