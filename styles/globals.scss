@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		@apply bg-gray-50;
+	}
+}
+
+@layer components {
+	.the-reserve-card {
+		@apply rounded-lg overflow-hidden border border-amber-400 flex p-2;
+	}
+	.the-button {
+		@apply uppercase border border-gray-300 px-5 py-1 rounded tracking-wide text-primary hover:shadow-inner transition ease-out duration-300 transform hover:scale-105;
+	}
+	.widget-title {
+		@apply tracking-wide text-lg;
+	}
+	.widget-subtitle {
+		@apply block text-gray-400 text-xs;
+	}
+	.widget-action {
+		@apply mt-2 text-primary text-xs;
+	}
+	.rating-container {
+		@apply text-2xs mb-1 flex;
+	}
+	.rating-star {
+		@apply text-yellow-400 flex items-center;
+	}
+	.rating-text {
+		@apply ml-1;
+	}
+}
